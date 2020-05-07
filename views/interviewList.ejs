@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/interviewList.css">
+
+<h2 style="text-decoration: underline;">Add Interview - </h2>
+<form action="/user/interview-list/add-interview" method="post"> 
+    <input type="text" name="company" placeholder="Company Name" required>
+    <span>Date : </span>
+    <input type="date" name="date" required>
+    <button type="submit">Add Interview</button>
+</form>
+
+<hr>
+
+<h2 style="text-decoration: underline;">Allocate Student To Interview - </h2>
+
+<form action="/user/interview-list/add-student" method="post"> 
+    <input type="mail" name="email" placeholder="Student Email" required>
+    <span>Select Company : </span>
+    <select name="companyByDate" required>
+        <% for(let interview of interviews) {%> 
+            <option><%= interview["company"]+','+interview["date"]%></option>
+        <% } %> 
+    </select>
+    <button type="submit">Allocate Student</button>
+</form>
+<hr>
+<h3>Interview List - </h3>
+
+<div id="table-view">
+    <table >
+        <tr>
+            <th> ID </th>
+            <th> COMPANY </th>
+            <th> DATE </th>
+            <th> STUDENTS ALLOWED </th>
+        </tr>
+        <% var id = 1; %> 
+        <% for(let interview of interviews){ %> 
+            <tr>
+                <td><%= id++ %> </td>
+                <td><a href="/user/interview-list/student-list/<%= interview.id%>"><%= interview["company"] %> </a></td>
+                <td><%= interview["date"] %> </td>
+                <td><%= interview.studentResult.length %> </td>
+            </tr>
+        <% } %> 
+    </table>
+</div>

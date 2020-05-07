@@ -1,0 +1,12 @@
+#table-view table, #table-view td, #table-view th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#table-view th {
+  color: red;
+}
+
+#table-view td {
+  color: green;
+}

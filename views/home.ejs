@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/home.css">
+<div>
+    <h1 style="color: brown;"> Welcome To Ninjas Report Portal </h1>
+    <div id="home-section">
+        <% if(locals.user){ %>
+            <h2> Hey <%= user.name %> !</h2>
+            <div>
+                <a href="/user/student-list">view student list</a>
+            </div>
+            <div>
+                <a href="/user/interview-list">view interview list</a>
+            </div>
+            <div>
+                <!-- TO DO -->
+                <a href="/downloadCSV">Download Data (CSV file) </a>
+            </div>
+        <% } %>
+    </div>
+    
+</div>

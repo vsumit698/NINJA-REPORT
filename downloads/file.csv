@@ -1,0 +1,6 @@
+ID,NAME,EMAIL,COLLEGE,STATUS,DSA SCORE,WEB-D SCORE,REACT SCORE,INTERVIEW DATE,INTERVIEW COMPANY,INTERVIEW RESULT
+1,sunita ,vsunita111978@gmail.com,abcd,not placed,50,50,50,2020-05-07,adobe,on hold
+2,sunita ,vsunita111978@gmail.com,abcd,not placed,50,50,50,2020-05-08,microsoft,on hold
+3,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-07,adobe,pass
+4,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-08,microsoft,pass
+5,basdev verma,vbasdev@gmail.com,abcd,placed,70,70,70,none,none,none

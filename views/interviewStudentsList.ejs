@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/css/interviewStudentList.css">
+
+
+<span style="font-size: 28px;">PARTICIPATION IN </span>
+<span style="color: aquamarine;font-size: 26px;"><%= interview["company"] %></span>
+<span style="font-size: 28px;">on DATE at </span>
+<span style="color: aquamarine;font-size: 26px;"><%= interview["date"] %></span>
+
+<div id="table-view">
+    <table >
+        <tr >
+            <th rowspan="2">ID</th>
+            <th rowspan="2">NAME</th>
+            <th rowspan="2">EMAIL</th>
+            <th rowspan="2">COLLEGE</th>
+            <th rowspan="2">STATUS</th>
+            <th colspan="3">SCORE</th>
+            <th rowspan="2">INTERVIEW RESULT</th>
+        </tr>
+        <tr>
+            <th>DSA</th>
+            <th>WEB-D</th>
+            <th>REACT</th>
+            
+        </tr>
+        <% var id = 1 %> 
+        <% for(let result of interviewResult){ %>
+            <% let student = result.student %> 
+            <tr>
+                <td ><%= id++ %></td>
+                <td ><%= student.name %></td>
+                <td ><%= student.email %></td>
+                <td ><%= student.college %></td>
+                <td><%= student.status %></td>
+                <td><%= student.course.DSA_score %></td>
+                <td ><%= student.course.WebD_score %></td>
+                <td ><%= student.course.React_score %></td>
+                <td>
+                    <div><%= result.resultStatus %></div>
+                    <div>
+                        <form action="/user/interview-list/student-list/set-status/<%= result.id%>" method="POST">
+                            <select name="status">
+                                <option>pass</option>
+                                <option>fail</option>
+                                <option>not attempt</option>
+                                <option>on hold</option>
+                            </select>
+                            <button type="submit">SET STATUS</button>
+                        </form>
+                    </div>
+                </td>
+            </tr> 
+        <% } %>  
+        
+    </table>
+</div>

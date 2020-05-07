@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/css/student.css">
+<h1 style="text-decoration: underline;">Add Student</h1>
+
+<form action="/user/student-list/createStudent" method="POST">
+    <input type="text" name="name" placeholder="enter name" required>
+    <input type="email" name="email" placeholder="enter email" required>
+    <input type="text" name="college" placeholder="college name" required>
+    <span>Select Status - </span>
+    <select name="status">
+        <option>placed</option>
+        <option>not placed</option>
+    </select>
+
+    <h3>Course Score(min - 0,max - 100)</h3>
+    <input type="number" name="DSA_score" placeholder="DSA score" min="0" max="100" required> 
+    <input type="number" name="WebD_score" placeholder="WebD score" min="0" max="100" required>
+    <input type="number" name="React_score" placeholder="React score" min="0" max="100" required>
+    <button type="submit">Add Student</button>
+
+</form>
+
+<h1 style="text-decoration: underline;">Student List - </h1>
+
+<div id="table-view">
+    <table >
+        <tr >
+            <th rowspan="2">ID</th>
+            <th rowspan="2">NAME</th>
+            <th rowspan="2">EMAIL</th>
+            <th rowspan="2">COLLEGE</th>
+            <th rowspan="2">STATUS</th>
+            <th colspan="3">SCORE</th>
+            <th colspan="3">INTERVIEW</th>
+        </tr>
+        <tr>
+            <th>DSA</th>
+            <th>WEB-D</th>
+            <th>REACT</th>
+            <th>DATE</th>
+            <th>COMPANY</th>
+            <th>RESULT</th>
+        </tr>
+        <% var id = 1 %> 
+        <% for(let student of studentList){ %>
+            <% var rSpan = 1 %>
+            <% if(student.interviewResult.length > 1) { %> 
+                <% rSpan = student.interviewResult.length; %>  
+            <% } %>
+            <tr>
+                <td rowspan="<%= rSpan%>"><%= id++ %></td>
+                <td rowspan="<%= rSpan%>"><%= student.name %></td>
+                <td rowspan="<%= rSpan%>"><%= student.email %></td>
+                <td rowspan="<%= rSpan%>"><%= student.college %></td>
+                <td rowspan="<%= rSpan%>"><%= student.status %></td>
+                <td rowspan="<%= rSpan%>"><%= student.course.DSA_score %></td>
+                <td rowspan="<%= rSpan%>"><%= student.course.WebD_score %></td>
+                <td rowspan="<%= rSpan%>"><%= student.course.React_score %></td>
+                <% if(student.interviewResult.length == 0){ %> 
+                    <td>None</td>
+                    <td>None</td>
+                    <td>None</td>
+                <% }else{ %> 
+                    <td><%= student.interviewResult[0]["interview"]["date"]%></td>
+                    <td><%= student.interviewResult[0]["interview"]["company"]%></td>
+                    <td><%= student.interviewResult[0]["resultStatus"]%></td>
+                <% } %> 
+            </tr> 
+            <% for(let i=1;student.interviewResult.length > i;i++){ %> 
+                <tr>
+                    <td><%= student.interviewResult[i]["interview"]["date"]%></td>
+                    <td><%= student.interviewResult[i]["interview"]["company"]%></td>
+                    <td><%= student.interviewResult[i]["resultStatus"]%></td>
+                </tr>
+            <% } %> 
+            
+        <% } %>  
+        
+    </table>
+</div>
+
+

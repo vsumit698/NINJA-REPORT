@@ -1,0 +1,18 @@
+<h1>
+    Reset Password
+</h1>
+
+<form action="/user/update-password" method="POST">
+    <div>
+        <input type="password" name="password" placeholder="Current Password" required>
+    </div>
+    <div>
+        <input type="password" name="newPassword" placeholder="New Password" required>
+    </div>
+
+    <div>  
+        <input type="password" name="confirmNewPassword" placeholder="confirm New Password" required>
+    </div>
+
+    <button type="submit">Reset Password</button>
+</form>
