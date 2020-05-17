@@ -1,0 +1,12 @@
+Placement Cell Interface
+Apr 2020 – May 2020
+
+Project descriptionA company constantly needs to download its data to compile different reports. Created an interface for the employees of this company to fill in the data into the database and then download it in CSV format.
+
+This Project helps the placement cell to keep track of each Student And their Interviews. It includes Adding New Student, Adding New Interview, Show List of Students, Their Details, Show both Past And Upcoming Interview, Allocating Students for Interviews, Marking their Status after an interview
+AND **Download whole data in CSV format**.
+
+#Technologies :
+*Server Side - NODE JS,
+*Data Base - MONGO DB
+#Skills - JAVASCRIPT, HTML, CSS

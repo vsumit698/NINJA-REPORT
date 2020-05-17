@@ -1,6 +1,10 @@
 ID,NAME,EMAIL,COLLEGE,STATUS,DSA SCORE,WEB-D SCORE,REACT SCORE,INTERVIEW DATE,INTERVIEW COMPANY,INTERVIEW RESULT
 1,sunita ,vsunita111978@gmail.com,abcd,not placed,50,50,50,2020-05-07,adobe,on hold
 2,sunita ,vsunita111978@gmail.com,abcd,not placed,50,50,50,2020-05-08,microsoft,on hold
-3,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-07,adobe,pass
-4,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-08,microsoft,pass
-5,basdev verma,vbasdev@gmail.com,abcd,placed,70,70,70,none,none,none
+3,sunita ,vsunita111978@gmail.com,abcd,not placed,50,50,50,2020-05-08,coding ninjas,not attempt
+4,sunita ,vsunita111978@gmail.com,abcd,not placed,50,50,50,2020-05-14,amazon,on hold
+5,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-07,adobe,not attempt
+6,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-08,microsoft,pass
+7,sumit verma,vsumit698@gmail.com,jss academy of technical education,placed,50,50,50,2020-05-08,coding ninjas,pass
+8,basdev verma,vbasdev@gmail.com,abcd,placed,70,70,70,none,none,none
+9,aman,abc@domain.com,delhi college,not placed,70,48,80,none,none,none
