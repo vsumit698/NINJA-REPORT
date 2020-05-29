@@ -1,5 +1,3 @@
-# mockIVCareerCamp
-
 ## Installation Guide :       
 1.Start server by **node server.js** OR **nodemon**    
 
